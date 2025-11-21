@@ -22,5 +22,8 @@
 
 További részletek: [Teljes Rendszer Dokumentáció](docs/COMPLETE_SYSTEM_ANALYSIS_FOR_AI.md) (schema, edge functions, security).
 
+## Loop-alapú AI válaszformátum
+Ha a modellnek mindig önellenőrző (RAW/REVIEW/FINAL) válaszokat kell adnia, másold a kész system promptokat a ChatGPT-hez és a Claude-hoz a [docs/LOOP_PROMPTS.md](docs/LOOP_PROMPTS.md) fájlból.
+
 ## Gyors Indítás
 1. **Klónozás**:
