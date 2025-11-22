@@ -22,5 +22,17 @@
 
 További részletek: [Teljes Rendszer Dokumentáció](docs/COMPLETE_SYSTEM_ANALYSIS_FOR_AI.md) (schema, edge functions, security).
 
+## Loop-alapú AI válaszformátum
+Ha a modellnek mindig önellenőrző (RAW/REVIEW/FINAL) válaszokat kell adnia, másold a kész system promptokat a ChatGPT-hez és a Claude-hoz a [docs/LOOP_PROMPTS.md](docs/LOOP_PROMPTS.md) fájlból.
+
+## SECUND-RCN technológiai jelentés
+Átfogó architektúra- és üzleti értékjelentés a CRCL + RCN prototípusról: [docs/SECUND_RCN_REPORT.md](docs/SECUND_RCN_REPORT.md).
+
 ## Gyors Indítás
 1. **Klónozás**:
+
+### Gyors prototípus a SECUND-RCN kódhoz
+A `src/services/safetyService.ts` tartalmazza a CRCL/RCN metrikák kiszámításának egyszerűsített referenciáját és a UI-frame építését, míg a `pages/api/secund-rcn.ts` egy mock API-handlert ad a metrikákhoz. A `components/SecundRcnPanel.tsx` egy minimális React panel, amely megjeleníti az akciót, indokokat és kockázati értékeket.
+
+### Teszt példa
+A `tests/secund-rcn.e2e.spec.ts` Playwright/Jest stílusban demonstrálja, hogyan ellenőrizhető, hogy a frame nem szivárogtat debug mezőket, és hogy a Drift fázis növeli a kockázati szintet.
